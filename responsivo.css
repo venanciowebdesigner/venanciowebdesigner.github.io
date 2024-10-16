@@ -1,0 +1,21 @@
+@media screen and (max-width: 900px){
+        
+    header .menu-desktop, header .btn-contato{
+        display: none;
+    }
+
+    /*menu mob*/
+
+    header .btn-menu-mob{
+        display: block;
+    }
+
+    .button{
+        padding: 7px 20px;
+    }
+
+    .bolo{
+        line-height: 1em;
+    }
+
+}

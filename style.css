@@ -1,0 +1,310 @@
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:wght@300;400;500;900&display=swap');
+
+    @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+    *{
+        font-family: "Poppins", sans-serif;
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    html{
+        scroll-snap-type: y mandatory;
+        padding: 0;
+        margin: 0;
+    }
+
+    body{
+        overflow-x: hidden;
+    }
+
+    video, .img-tesla{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;/*define quem fica na frente*/
+        object-fit: cover;/*cobrir a tela toda*/
+        filter: brightness(60%);
+    }
+
+    .item{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        position: relative;
+        scroll-snap-align: start;
+    }
+
+    h1{
+        margin-top: 50px;
+        color: #fff;
+        font-size: 50px;
+    }
+
+    h1 span{
+        margin-top: 50px;
+        color: #fff;
+        font-size: 50px;
+        font-family: "Lobster Two", system-ui;
+    }
+
+    .sub-titulo{
+        color: #fff;
+        font-style: italic;
+    }
+
+    .info-carro{
+        margin-top: 80px;
+        text-align: center;
+    }
+
+    .rodape{
+        text-align: center;
+    }
+
+    .button{
+        background-color: rgba(34, 34, 34, 0.8);
+        color: #fff;
+        padding: 7px 80px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .test-drive{
+        color: #000;
+        background-color: #fff;
+        font-family: "Lobster Two", system-ui;
+        font-size: 17px;
+    }
+
+    .texto-rodape{
+        color: #fff;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .diferente{
+        color: #ccc;
+    }
+
+    .formulario{
+        position: absolute;
+        top: 70px;
+        
+        width: 500px;
+        height: 100%;
+        z-index: 9;
+        left: -50%;
+        transition: 1.5s;
+    }
+
+
+
+
+    .interface{
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 4%;
+    }
+
+    header .btn-contato button, .hero-site button, .hoteis button{
+        font-size: 18px;
+        background-color: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        cursor: pointer;
+        transition: .5s;
+    }
+
+    header .btn-contato button:hover, .hero-site button:hover, .hoteis button:hover{
+        background-color: #fff;
+        color: #000;
+    }
+
+    /*estilo do header*/
+
+    header{
+        width: 100%;
+        padding: 20px 0;
+        position: fixed;
+        /* height: 50px; */
+        top: 0;
+        left: 0;
+
+        transition: .5s;
+        z-index: 99999999999999999999999999999999999;
+    }
+
+    header .interface{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .logo img{
+        max-width: 40px;
+    }
+
+    /*estilo do menu dinamico*/
+
+    header .logo img.logo-preta{
+        display: none;
+    }
+
+    header.rolar{
+        background-color: #fff;
+        padding: 20px 0;
+        box-shadow: 0 0 8px #00000060;
+    }
+
+    header.rolar .menu-desktop nav ul li a{
+        color: #000;
+    }
+
+    header.rolar .btn-contato button{
+        border: 1px solid #000;
+        color: #000;
+    }
+
+    header.rolar .btn-contato button:hover{
+        background-color: #000;
+        color: #fff;
+    }
+
+    header.rolar .logo .logo-branca{
+        display: none;
+    }
+
+    header.rolar .logo .logo-preta{
+        display: block;
+    }
+
+    /*----------------------*/
+
+    header .menu-desktop nav ul{
+        list-style-type: none;
+    }
+
+    header .menu-desktop nav ul li{
+        display: inline-block;
+        margin: 0 20px;
+    }
+    
+    header .menu-desktop nav ul li a{
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        transition: .2s;
+    }
+
+    .menu-desktop nav a:hover{
+        transform: scale(1.05);
+        font-family: "Lobster Two", system-ui;
+        font-size: 18px;
+    }
+
+    header .btn-contato button{
+        width: 140px;
+        height: 50px;
+    }
+
+    /*estilo do botão menu mobile*/
+
+
+    header .btn-menu-mob{
+        display: none;
+        position: relative;
+        z-index: 9999999;
+    }
+
+    header .btn-menu-mob div{
+        background-color: #fff;
+        height: 3px;
+        margin: 10px 0;
+
+        transition: .2s;
+    }
+
+    header .btn-menu-mob .line-menumob-1{
+        width: 30px;
+    }
+
+    header .btn-menu-mob .line-menumob-2{
+        width: 20px;
+    }
+
+    header.rolar .btn-menu-mob div{
+        background-color: #000;
+    }
+
+    header .btn-menu-mob .line-menumob-1.ativo1{
+        transform: rotate(45deg) translate(30%);
+        background-color: #fff;
+    }
+
+    header .btn-menu-mob .line-menumob-2.ativo2{
+        transform: rotate(-45deg) translate(30%);
+        width: 30px;
+        background-color: #fff;
+    }
+
+    /*---------------------------*/
+
+    /*estilo do menu mobile*/
+
+    header .menu-mobile{
+        width: 0;
+        height: 0;
+        background-color: #000;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        overflow: hidden;
+        transition: .5s;
+    }
+
+    header .menu-mobile nav{
+        width: 100%;
+    }
+
+    header .menu-mobile nav ul{
+        list-style-type: none;
+    }
+
+    header .menu-mobile nav a{
+        font-size: 24px;
+        text-decoration: none;
+        color: #fff;
+        padding: 20px 0;
+        display: block;
+        transition: .5s;
+    }
+
+    header .menu-mobile nav a:hover{
+        background-color: #fff;
+        color: #000;
+        box-shadow: 0 0 20px #fff;
+        font-family: "Lobster Two", system-ui;
+    }
+
+    header .menu-mobile.abrir{
+        width: 100%;
+        height: 100vh;
+    }
+
+    body.no-overflow{
+        overflow: hidden;
+    }
